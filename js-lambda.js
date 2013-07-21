@@ -1,5 +1,5 @@
-//	JS-Lambda
-//  =========
+//	JS-Lambda v1.1
+//  ==============
 //
 //	Copyright 2013 Junil Um(엄준일)
 //  =============================
@@ -9,7 +9,7 @@
 //	Date: 2013-07-21
 
 
-var _DEBUG_ = _DEBUG_ || false;
+var _DEBUG_ = _DEBUG_ || true;
 var DEBUG = DEBUG || function(arg) { if( _DEBUG_ ) console.info(arg); };
 var F = undefined;
 ;(function() {
@@ -82,7 +82,7 @@ var F = undefined;
 		function getLambdaExpressionObject( expressionString ) {
 			expressionString = expressionString || "";
 
-			var regex = /[\(^\)]?([\w,\s]*)[\)^\(]?\s=>\s[\{^\}]?(.*[^;^}])[;\s\}^\{]?/gi;
+			var regex = /[\(^\)]?([\w,\s]*)[\)^\(]?\s=>\s([\{^\}]?.*[^;^\}][;\s\}^\{]?)/gi;
 			var match = regex.exec(expressionString);
 			if( match == null ) throw "It's correct expression string that " + expressionString;
 
@@ -121,7 +121,11 @@ var F = undefined;
 
 		for(var i=0; i<expression.params.length; i++) param.push(expression.params[i].name);
 
-		body = "return (function() { return (" + body + ")})();";
+		if( body[0] == '{') {
+			body = "return (function() {" + body + "})();";
+		} else {
+			body = "return (function() { return (" + body + "); })();";
+		}
 
 		DEBUG("LambdaExpression.prototype.exec.param: " + param);
 		DEBUG("LambdaExpression.prototype.exec.body : " + body);
@@ -130,3 +134,4 @@ var F = undefined;
 	}
 
 })();
+

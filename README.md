@@ -3,6 +3,13 @@ JS Lambda
 - It is possible lambda expression that can be used JavaScript.
 - you just got a function F();
 
+History
+=======
+- v1.1
+  Fixed bug expression body. \(2013-07-22)
+- v1.0
+  Released v1.0 \(2013-07-21)
+
 
 Simple Examples
 ===============
