@@ -1,9 +1,19 @@
-;"use strict";
+//	JS-Lambda
+//  =========
+//
+//	Copyright 2013 Junil Um(엄준일)
+//  =============================
+//
+//	LGPL LICENSE
+//  http://blog.powerumc.kr
+//	Date: 2013-07-21
 
-var _DEBUG_ = _DEBUG_ || true;
+
+var _DEBUG_ = _DEBUG_ || false;
 var DEBUG = DEBUG || function(arg) { if( _DEBUG_ ) console.info(arg); };
 var F = undefined;
 ;(function() {
+	;"use strict";
 
 	function INHERITANCE(CLASS, PARENT) {
 		for(var p in PARENT) if(PARENT.hasOwnProperty(p)) CLASS[p] = PARENT[p];
@@ -82,9 +92,6 @@ var F = undefined;
 		}
 
 		LambdaExpression.prototype.exec = function() {
-
-
-
 		};
 
 		return LambdaExpression;
@@ -123,10 +130,3 @@ var F = undefined;
 	}
 
 })();
-
-
-function callback( func ) {
-	if( func ) func();
-}
-
-callback(F("() => console.info('Hello World');"));

@@ -46,7 +46,7 @@ Callback Examples
         if( func ) func();
     }
 
-    callback( function() { console.info('My name is Junil Um); } );
+    callback( function() { console.info('My name is Junil Um'); } );
 
     // ** After with JS-Lambda **
     callback(  F("() => console.info('My name is Junil Um');")  );
@@ -61,7 +61,7 @@ With jQuery
     // Before
     var li = $("item li");
 
-    li.each( function(o) {
+    li.each( function(i, o) {
         $(o).addClass("some");
     } );
 
@@ -69,6 +69,6 @@ With jQuery
     // ** After with JS-Lambda **
     var li = $("item li");
 
-    li.each( F(" o => $(o).addClass('some');  ") );
+    li.each( F("(i, o) => $(o).addClass('some');") );
 
 ```
