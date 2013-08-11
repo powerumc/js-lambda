@@ -10,6 +10,12 @@ History
 - v1.0
   Released v1.0 \(2013-07-21)
 
+Use it
+=======
+Nuget
+```js
+PM> Install-Package JS.Lambda
+```
 
 Simple Examples
 ===============
