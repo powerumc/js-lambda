@@ -17,6 +17,13 @@ Nuget
 PM> Install-Package JS.Lambda
 ```
 
+Node.JS
+```js
+$ npm install js-lambda-expression
+
+required('js-lambda-expression');
+```
+
 Simple Examples
 ===============
 ```js

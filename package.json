@@ -1,0 +1,29 @@
+{
+  "name": "js-lambda-expression",
+  "version": "1.0.0",
+  "description": "It is possible lambda expression that can be used JavaScript.",
+  "main": "js-lambda.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/powerumc/js-lambda.git"
+  },
+  "keywords": [
+    "lambda",
+    "lambda",
+    "expression",
+    "expression",
+    "node.js",
+    "javascript",
+    "function"
+  ],
+  "author": "powerumc",
+  "license": "LGPL",
+  "readmeFilename": "README.md",
+  "gitHead": "2060aa687a4eb943bb3ca1cec9aa8011e1dc9dc0",
+  "bugs": {
+    "url": "https://github.com/powerumc/js-lambda/issues"
+  }
+}
