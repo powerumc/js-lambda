@@ -21,7 +21,7 @@ Node.JS
 ```js
 $ npm install js-lambda-expression
 
-required('js-lambda-expression');
+require('js-lambda-expression');
 ```
 
 Simple Examples
