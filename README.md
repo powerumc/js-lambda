@@ -1,54 +1,103 @@
-What's Markdown ToC
-=====================
+JS Lambda
+=========
+- It is possible lambda expression that can be used JavaScript.
+- you just got a function F();
 
-Markdown ToC is a composition library to render the **Markdown Flavored Syntax** and Create the **ToC(Table of Contents)** automatically.
-You're only markdown file, such as readme.md file.
+History
+=======
+- v1.1
+  Fixed bug expression body. \(2013-07-22)
+- v1.0
+  Released v1.0 \(2013-07-21)
 
-## Method 1. Local Repository
-
-1. You can download a zip file at [this link](https://github.com/powerumc/markdown-toc/archive/master.zip).
-2. And unzip a zipfile.
-3. You have to modify a README.md file what contents do you want.
-4. Upload your repository or git commit and push.
-
-## Method 2. GitHub gh-pages branch.
-
-Github gh-pages branch can host web page on github.com.
-
-### 1. Add remote repository the Markdown-ToC
-
-```
-$ git remote add markdown-toc git@github.com:powerumc/markdown-toc.git            # by ssh
-
-$ git remote add markdown-toc https://github.com/powerumc/markdown-toc.git        # by https
-
+Use it
+=======
+Nuget
+```js
+PM> Install-Package JS.Lambda
 ```
 
-### 2. Ready in your repository
+Node.JS
+```js
+$ npm install js-lambda-expression
 
-You should be  new branch is gh-pages without parent branch(--orphan).
-And remove all repository files.
-
-```
-$ git checkout --orphan gh-pages
-
-$ git rm -rf .
-
-$ git pull markdown-toc master:gh-pages
-
+require('js-lambda-expression');
 ```
 
-### 3. Modify your README.md
+1. Simple Examples
+===============
 
-All right. Now commit a README.md.
+### Before
+```js
+    function func(a,b) {
+        return a + b;
+    }
+    console.info( func(4,6) );
+
+    // Result
+    10
+```
+
+### After with JS-Lambda
+```js
+    var func = F("a,b => a + b");
+    console.info( func(4,6) );
+```
+
+Or you can invoke directly
+
+### Before
+```js 
+    function anonymousMethod(a,b) {
+        return a + b;
+    }
+    console.info( anonymousMethod(4,6) );
+
+    // Result
+    10
+```
+
+### After with JS-Lambda
+```js
+    console.info( F("a,b => a + b")(4,6) );
+```
+
+2. Callback Examples
+=================
+
+### Before
+```js
+    function callback( func ) {
+        if( func ) func();
+    }
+
+    callback( function() { console.info('My name is Junil Um'); } );
+```
+
+### After with JS-Lambda
+```js
+    callback(  F("() => console.info('My name is Junil Um');")  );
+
+    // Result
+    My name is Junil Um
+```
+
+3. With jQuery
+===========
+
+### Before
+```js
+    var li = $("item li");
+
+    li.each( function(i, o) {
+        $(o).addClass("some");
+    } );
+```
+
+### After
+```js
+    var li = $("item li");
+
+    li.each( F("(i, o) => $(o).addClass('some');") );
 
 ```
-$ git commit -am "init commit."
-```
-
-### 4. Push these
-
-```
-$ git push origin gh-pages
-```
-
