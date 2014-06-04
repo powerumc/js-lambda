@@ -1,3 +1,6 @@
+Junil Um  
+http://blog.powerumc.kr
+
 JS Lambda
 =========
 - It is possible lambda expression that can be used JavaScript.
