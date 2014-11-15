@@ -1,6 +1,8 @@
 Junil Um  
 http://blog.powerumc.kr
 
+![travis build results](https://travis-ci.org/powerumc/js-lambda.svg?branch=master)
+
 JS Lambda
 =========
 - It is possible lambda expression that can be used JavaScript.
