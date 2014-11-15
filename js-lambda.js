@@ -11,7 +11,7 @@
 
 var _DEBUG_ = _DEBUG_ || false;
 var DEBUG = DEBUG || function(arg) { if( _DEBUG_ ) console.info(arg); };
-var F = undefined;
+
 ;(function() {
 	;"use strict";
 
