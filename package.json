@@ -1,6 +1,6 @@
 {
   "name": "js-lambda-expression",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "It is possible lambda expression that can be used JavaScript.",
   "main": "js-lambda.js",
   "scripts": {
