@@ -1,0 +1,27 @@
+{
+  "name": "js-lambda-expression",
+  "main": "js-lambda.js",
+  "version": "1.1.2",
+  "homepage": "https://github.com/powerumc/js-lambda",
+  "authors": [
+    "Junil Um <powerumc@gmail.com>"
+  ],
+  "description": "It is possible lambda expression that can be used JavaScript.",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "js",
+    "javascript",
+    "lambda",
+    "expression"
+  ]
+}
